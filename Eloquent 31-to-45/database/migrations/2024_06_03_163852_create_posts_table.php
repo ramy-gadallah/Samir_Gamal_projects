@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title',50);
             $table->string('body',100);
+            $table->softDeletes(); // استخدام ده عشان امسح مسح واسيب الداتا فى الداتا بيز
             $table->timestamps();
         });
     }

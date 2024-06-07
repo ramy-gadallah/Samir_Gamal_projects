@@ -1,5 +1,6 @@
 @extends('layout.navbar')
 @section('content')
+<h1 class="text-center p-5">All Posts </h1>
 <table class="table">
     <thead>
       <tr>
@@ -32,13 +33,25 @@
                 <a href="{{ route('edit',$post->id) }}">
                     <button class="btn btn-danger">
                         Edit
-                    </button>
-                </a>
+                      </button>
+
+                                {{-- الطريقة الاولى ف الحذف  --}}
+                                {{-- use route "get"   --}}
+                </a>    
                 <a href="{{ route('delete',$post->id) }}">
                     <button class="btn btn-danger">
-                        Delete
+                      Soft Delete
                     </button>
                 </a>
+      {{-- ________________________________________________________________________________________ --}}
+                                      {{-- الطريقة الثانية ف الحذف  --}
+                                        {{-- use route 'delete' --}}
+
+                {{-- <form action="{{ route('delete',$post->id)}}" method="POST">
+                  @method('DELETE')
+                  @csrf
+                    <button class="btn btn-danger" type="submit"> DELETE BY FORM</button>
+                </form> --}}
         </td>
       </tr>
       @endforeach
