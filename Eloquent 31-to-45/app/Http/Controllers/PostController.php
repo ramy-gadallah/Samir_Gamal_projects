@@ -118,7 +118,7 @@ use Illuminate\Http\Request;
          return redirect()->back();
     }
 
-    public function forceDelete($id){
+    public function forceDelete($id){   
         Post::withTrashed()
         ->where('id', $id)
         ->forceDelete();
