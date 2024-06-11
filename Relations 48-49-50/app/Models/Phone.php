@@ -12,8 +12,11 @@ class Phone extends Model
     protected $fillable = ['code','phone','user_id'];
 
 
+
+        //////////////////////////////////////////////// Relations one to one ////////////////////////////////////////////////////
+                        
 public function user(){
-    return $this->belongsTo(User::class)->select('name');
+    return $this->belongsTo(User::class);
 }
 
 }

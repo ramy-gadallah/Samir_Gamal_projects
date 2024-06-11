@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+            ///////////////////////////// method of one to many Relation ///////////////////////////////////////
+
     public function posts(){
         $post = Post::find(1);
 
@@ -17,7 +20,7 @@ class PostController extends Controller
 
     public function comments(){
 
-        $comment=Comment::find(5);
+        $comment=Comment::find(1);
         return $comment->post;
     }
 

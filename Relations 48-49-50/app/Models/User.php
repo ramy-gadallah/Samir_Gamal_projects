@@ -43,6 +43,7 @@ class User extends Authenticatable
     ];
 
     //////////////////////////////////////////////// Relations one to one ////////////////////////////////////////////////////
+    
     public function phone(){
         return $this->hasOne(Phone::class,'user_id');
     }

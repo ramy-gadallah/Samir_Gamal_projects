@@ -17,7 +17,7 @@ class UserController extends Controller
     } 
 
     public function user(){
-        $phone=Phone::find(2);
+        $phone=Phone::find(1);
         return $phone->user;
     }
 
