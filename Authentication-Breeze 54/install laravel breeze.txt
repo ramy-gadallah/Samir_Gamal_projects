@@ -1,6 +1,8 @@
                                            * To install laravel breeze *
 
 1-composer require laravel/breeze --dev
+1-composer require laravel/breeze:^1.9 --dev
+
 
 2-php artisan breeze:install
 

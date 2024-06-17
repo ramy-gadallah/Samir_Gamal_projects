@@ -28,7 +28,6 @@ Route::get('all',[PostController::class,'all'])->name('all');
 Route::get('edit/{id}',[PostController::class,'edit'])->name('edit');
 Route::post('update/{id}',[PostController::class,'update'])->name('update');
 
-// Route::get('delete/{id}',[PostController::class,'delete'])->name('delete');
 Route::get('delete/{id}',[PostController::class,'delete'])->name('delete');
 Route::get('deleteAll',[PostController::class,'deleteAll'])->name('deleteAll');
 
